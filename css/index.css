@@ -1,16 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Poppins:wght@400;500&display=swap');
 
-*{
+:root {
+    --highlightColour: #EF476F;
+    --navColour: #00BAFF;
+    --bodyColour: #E2E2E2;
+    --fontColour: #011C27;
+    /*--altColour: #BE7989;*/
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Poppins, serif;
 }
-body{
-   /* background-color: #011C27;*/
- background-color: #E2E2E2;
+* a{
+    text-decoration: none;
 }
-nav{
+
+body {
+    /* background-color: #011C27;*/
+    background-color: var(--bodyColour);
+}
+
+nav {
     padding: 5px;
-     background-color: #011C27;
+    background-color: var(--navColour);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav h1 {
+    color: var(--fontColour);
+    /*font-weight: 1500;*/
+}
+
+nav p {
+    color: var(--fontColour);
+    font-size: 1rem;
+}
+
+/*button styling*/
+
+.button {
+    font: inherit;
+    border: 1px solid var(--fontColour);
+    background: var(--highlightColour);
+    color: var(--fontColour);
+    padding: 0.5rem 2.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 30px;
+}
+
+.button:hover,
+.button:active {
+    background: var(--bodyColour);
+    border-color: #741188;
+}
+
+.button:focus {
+    outline: none;
 }
